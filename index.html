@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Start Head-->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Mate</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/web_Page/favicon.ico" />
+
+    <!--import CSS file-->
+    <link rel="stylesheet" href="css/web__Page1.css">
+    <link rel="stylesheet" href="css/socialButtons.css">
+    <!--End Import CSS file-->
+
+    <!--JavaScript Import-->
+    <script src="js/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--End JavaScript Import-->
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Quicksand|Titillium+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <!--End Google Fonts-->
+
+    <!--Frame works-->
+    <!--Import Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--End Import Bootstrap-->
+
+    <!--Materialize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/material.min.css">
+    <!--End Materialize-->
+
+    <!--Import Button CSS Files-->
+    <link rel="text/css" href="css/unite.css">
+    <link rel="text/css" href="css/bttn.min.css">
+    <link href="https://cdnjs.com/libraries/bttn.css">
+    <!--End Button Import-->
+    <!--End frame works-->
+
+</head>
+<!--End Head-->
+
+<!--Start Body-->
+<body>
+<!--Start Header-->
+<header id="header">
+    <div id="header-panel" class="row card-panel orange lighten-1">
+            <div id="title" class="col-md-3">
+                <h1>Chess Mate</h1>
+            </div>
+
+            <div id="navi" class="col-md-6">
+                <div class="btn-header col s12 m2" onclick="home()">
+                    <p class="z-depth-1">Home</p>
+                </div>
+                <div class="btn-header col s12 m2" onclick="play()">
+                    <p class="z-depth-1">Play</p>
+                </div>
+                <div class="btn-header col s12 m2">
+                    <p class="z-depth-1">Online</p>
+                </div>
+                <div class="btn-header col s12 m2" >
+                    <p class="z-depth-1">Contacs</p>
+                </div>
+                <div class="btn-header col s12 m2">
+                    <p class="z-depth-1">About us</p>
+                </div>
+            </div>
+    </div>
+</header>
+<!--End Header-->
+
+<!--Strat Contenet Background-->
+<div id="background">
+    <div id="rectange">
+        <div class="logo">
+            <img id="logo" src="images/web_Page/logo1.png">
+        </div>
+        <div id="content">
+            <h5>With Chess Mate Free for everyone<br> can work out in this game to the top <br>level and improve their chess skill.<br>Enjoy!!!</h5>
+            <div id="playNavButton" class="z-depth-5" onclick="play()">
+                <h4 style="margin-top: 10px">Play</h4>
+            </div>
+        </div>
+
+        <!--Start Slideshow-->
+        <div class="carousel">
+            <a class="carousel-item" href="#one!"><img src=images/slideshow/1.jpg></a>
+            <a class="carousel-item" href="#two!"><img src=images/slideshow/2.jpg></a>
+            <a class="carousel-item" href="#three!"><img src=images/slideshow/3.jpg></a>
+            <a class="carousel-item" href="#four!"><img src=images/slideshow/4.jpeg></a>
+            <a class="carousel-item" href="#five!"><img src=images/slideshow/5.jpeg></a>
+            <a class="carousel-item" href="#five!"><img src=images/slideshow/6.jpg></a>
+        </div>
+        <!--End Slideshow-->
+    </div>
+
+</div>
+<!--End Contenet Background-->
+
+<!--Start Footer-->
+<footer id="footer">
+    <div class="containOne">
+        <div class="row">
+            <!--Start Social media details-->
+            <div id="socialMedia" class="col l4 offset-l2 s12">
+                <h5 class="white-text">Follow me on</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/sandaru.chamod.1" target="_blank">Facebook</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/sandaru_chamod/?hl=en" target="_blank">Instagram</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://https://www.linkedin.com/in/sandaru-chamod-687166148/" target="_blank">LinkedIn</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://github.com/SandaruChamod/Chess-Mate" target="_blank">Github</a></li>
+                </ul>
+            </div>
+            <!--End Social media details-->
+        </div>
+    </div>
+
+    <!--Start Photo-->
+    <div id="photo1">
+        <img src="images/web_Page/2.png">
+    </div>
+    <!--End Photo-->
+
+    <!--Start footer end-->
+    <div class="footer-last">
+        <div class="contain">
+            &#169; 2017 Sandaru Chamod. All right received
+        </div>
+    </div>
+    <!--End footer end-->
+</footer>
+<!--End Footer-->
+</body>
+<!--End Body-->
+
+<!--Start Script-->
+<script>
+//    Set Slideshow
+    $(document).ready(function(){
+        $('.carousel').carousel();
+    });
+//   End Set Slideshow
+    Materialize.toast('Welcome!', 4000);
+
+//Navigate to Home
+function home() {
+    window.location.href= './board.html';
+};
+//Navigate to Play
+function play() {
+    window.location.href= './board.html';
+};
+
+//Disable mouse Right-Click
+$(document).ready(function () {
+    //Disable full page
+    $("body").on("contextmenu",function(e){
+        return false;
+    });
+
+    //Disable part of page
+    $("#id").on("contextmenu",function(e){
+        return false;
+    });
+});
+</script>
+<!--End Script-->
+</html>

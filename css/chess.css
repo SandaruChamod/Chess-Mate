@@ -1,0 +1,108 @@
+.body{
+	text-align: center;
+
+}
+.squareWhite {
+	background-image: url("../images/chess_Board/nb2.png");
+	/*background: linear-gradient(-9deg ,sandybrown,lightgoldenrodyellow) ;*/
+	float:left;
+	width: 80px;
+	height: 80px;
+	/*border: orange solid 1px;*/
+}
+
+.squareBlack{
+	background-image: url("../images/chess_Board/nb1h.png");
+	/*background-color: saddlebrown ;*/
+	float:left;
+	width: 80px;
+	height: 80px;
+	border: black solid 1px;
+}
+#board{
+	perspective: 2000px;
+	perspective-origin: 30%;
+	border: black solid 15px;
+	border-radius: 1em;
+	width: 670px;
+	height: 670px;
+	margin: auto;
+	left: 10px;
+	top: 10%;
+	bottom: 20%;
+	right: 10%;
+	padding-left: 0px;
+	margin-left: 0px;
+	margin-top: 20px;
+	position: absolute;
+	transform: rotateX(50deg);
+	//z-index: 10;
+
+
+
+}
+.pathViewer{
+	background-image: url("../images/chess_Board/block3.jpg");
+}
+.selectedBox{
+	border: ridge #000000;
+	background-color:#ffdf05;
+}
+.redSquare{
+	background-image: url("../images/chess_Board/block4.jpg");
+}
+.hover{
+	position: absolute;
+}
+.hover:hover{
+	background-image: url("../images/chess_Board/block3.jpg");
+}
+.position{
+	color: white;
+	position: absolute;
+	text-align: center;
+
+}
+#outerDiv {
+	perspective: 2000px;
+	perspective-origin: 30%;
+	//background-color: black;
+	position: absolute;
+	width: 750px;
+	height: 750px;
+	//border: #000000 solid 1px;
+	border-radius: 1em;
+	margin: auto;
+	left: 28%;
+	top: 35%;
+	bottom: 40%;
+	right: 88%;
+	//transform: rotateX(55deg);
+	//z-index: 2;
+}
+.hero-unit1{
+	background-color: lightgrey;
+	position: absolute;
+	height: 250px;
+	width: 250px;
+	margin-left: 90px;
+	margin-top: 80px;
+	text-align: center;
+
+}
+.hero-unit2{
+	background-color: lightgrey;
+	position: absolute;
+	height: 250px;
+	width: 250px;
+	right: 0px;
+	margin-top: 82px;
+	text-align: center;
+}
+.form-search{
+	position: absolute;
+	margin-left: 40px;
+	padding-left: 30px;
+	height: 100px;
+	width: 150px;
+}

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Start head-->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Mate</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/web_Page/favicon.ico" />
+
+    <!--Import CSS Files-->
+    <link rel="stylesheet" href="css/web_Page2.css">
+    <link rel="stylesheet" href="css/chess.css">
+    <!--End Import CSS Files-->
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Quicksand|Titillium+Web" rel="stylesheet">
+    <!--End Google Fonts-->
+
+    <!--Import Bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--End Import Bootstrap-->
+
+    <!--Frame works-->
+    <!--Import Bootstrap JS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--End Import Bootstrap JS-->
+
+    <!--Import Materialize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/material.min.css">
+    <!--End Import Materialize-->
+
+    <!--Import Font Awsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <!--End Import Font Awsome-->
+
+    <!--Import cloudflare Alerts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    <!--End Import cloudflare Alerts-->
+
+    <!--Import Button CSS Files-->
+    <link rel="text/css" href="css/unite.css">
+    <link rel="text/css" href="css/bttn.min.css">
+    <link href="https://cdnjs.com/libraries/bttn.css">
+    <!--End Button Import-->
+
+    <!--End frame works-->
+
+</head>
+<!--End head-->
+
+<!--Start body-->
+<body>
+
+<!--Start Header-->
+<header id="header">
+    <!--Start Navigation Bar-->
+
+    <!--Start Icon-->
+    <div id="icon">
+        <img id="icon-image" src="images/web_Page/icon2.png">
+    </div>
+    <!--End Icon-->
+
+    <!--Start Navigation Buttons Panel-->
+    <div id="header-panel" class="row card-panel orange lighten-1">
+        <div id="title" class="col-md-3">
+            <h1>Chess Mate</h1>
+        </div>
+
+        <!--Start Navigation Buttons-->
+        <div id="navi" class="col-md-6">
+            <div class="btn-header col s12 m2" onclick="home()">
+                <p class="z-depth-1">Home</p>
+            </div>
+            <div class="btn-header col s12 m2" onclick="play()">
+                <p class="z-depth-1">Play</p>
+            </div>
+            <div class="btn-header col s12 m2">
+                <p class="z-depth-1">Online</p>
+            </div>
+            <div class="btn-header col s12 m2" >
+                <p class="z-depth-1">Contacs</p>
+            </div>
+            <div class="btn-header col s12 m2">
+                <p class="z-depth-1">About us</p>
+            </div>
+        </div>
+        <!--End Navigation Buttons-->
+    </div>
+    <!--End Navigation Buttons Panel-->
+    <!--End Navigation Bar-->
+</header>
+<!--Start Header-->
+
+<!--Start side Bar-->
+<div id="side-Buttons">
+    <!--Start side Bar Buttons-->
+    <div class="icon-bar z-depth-4">
+        <a onclick="setChessPieces()"><i class="material-icons z-depth-1"style="font-size: 50px">play_circle_filled</i></a>
+        <a onclick="location.reload(true)"><i class="material-icons z-depth-1"style="font-size: 50px">refresh</i></a>
+        <a href="#"><i class="material-icons z-depth-1"style="font-size: 50px">pause</i></a>
+        <a href="#"><i class="material-icons z-depth-1"style="font-size: 50px">people</i></a>
+        <a href="#"><i class="material-icons z-depth-1"style="font-size: 50px">search</i></a>
+        <a href="#"><i class="material-icons z-depth-1"style="font-size: 50px">sentiment_very_satisfied</i></a>
+        <a href="#"><i class="material-icons z-depth-1"style="font-size: 50px">star</i></a>
+    </div>
+    <!--End side Bar Buttons-->
+</div>
+<!--End side Bar-->
+
+<!--Start Score Panel1-->
+<div id="scoreBoard1" class="hero-unit1 z-depth-4">
+    <h2 style="background-color: black;-webkit-text-fill-color: white;margin-top: 0px;font-family: 'Quicksand', sans-serif;font-size: 30px;">Player 01</h2>
+    <p>Score</p>
+        <form class="form-search">
+            <input id="player1_text" type="text" class="input-medium search-query">
+        </form>
+    <ul id="pawnProButtons">
+        <li><a id="bQueen" onclick="checkPawnPromotions(id)"class="btn-floating orange"><i  class="material-icons"><img style="margin-bottom: 8px" src="images/chess_Board/pack2/bQueen 30.png"></i></a></li>
+        <li><a id="bBishop" onclick="checkPawnPromotions(id)"class="btn-floating orange"><i  class="material-icons"><img style="margin-bottom: 8px" src="images/chess_Board/pack2/bBishop 30.png"></i></i></a></li>
+        <li><a id="bKnight" onclick="checkPawnPromotions(id)"class="btn-floating orange"><i  class="material-icons"><img style="margin-bottom: 8px" src="images/chess_Board/pack2/bKnight 30.png"></i></a></li>
+        <li><a id="bRook" onclick="checkPawnPromotions(id)"class="btn-floating orange"><i  class="material-icons"><img style="margin-bottom: 8px" src="images/chess_Board/pack2/bRook 30.png"></i></a></li>
+    </ul>
+</div>
+
+
+
+<!--End Score Panel1-->
+
+<!--Start Score Panel2-->
+<div id="scoreBoard2" class="hero-unit2 z-depth-4">
+    <h2 style="background-color: white;-webkit-text-fill-color: black;margin-top: 0px;font-family: 'Quicksand', sans-serif;font-size: 30px">Player 02</h2>
+    <p>Score</p>
+        <form class="form-search">
+            <input id="player2_text" type="text" class="input-medium search-query">
+        </form>
+    <ul id="pawnProButtons2">
+        <li><a id="wQueen" onclick="checkPawnPromotions(id)"class="btn-floating orange "><i  class="material-icons"><img style="margin-bottom: 8px" src="images/chess_Board/pack2/wQueen 30.png"></i></a></li>
+        <li><a id="wBishop" onclick="checkPawnPromotions(id)"class="btn-floating orange"><i  class="material-icons"><img style="margin-bottom: 8px" src="images/chess_Board/pack2/wBishop 30.png"></i></i></a></li>
+        <li><a id="wKnight" onclick="checkPawnPromotions(id)"class="btn-floating orange"><i  class="material-icons"><img style="margin-bottom: 8px" src="images/chess_Board/pack2/wKnight 30.png"></i></a></li>
+        <li><a id="wRook" onclick="checkPawnPromotions(id)"class="btn-floating orange"><i  class="material-icons"><img style="margin-bottom: 8px" src="images/chess_Board/pack2/wRook 30.png"></i></a></li>
+    </ul>
+
+</div>
+<!--End Score Panel2-->
+
+
+<!--Start Chess Board-->
+<div id="outerDiv">
+    <div>
+        <p class="position" style="height: 80px;width: 30px;margin-top: 0px;top: 70px;">8</p>
+    </div>
+    <div>
+        <p class="position" style="height: 80px;width: 30px;margin-top: 0px;top: 150px;">7</p>
+    </div>
+    <div>
+        <p class="position" style="height: 80px;width: 30px;margin-top: 0px;top: 240px;">6</p>
+    </div>
+    <div>
+        <p class="position" style="height: 80px;width: 30px;margin-top: 0px;top: 320px;">5</p>
+    </div>
+    <div>
+        <p class="position" style="height: 80px;width: 30px;margin-top: 0px;top: 400px;">4</p>
+    </div>
+    <div>
+        <p class="position" style="height: 80px;width: 30px;margin-top: 0px;top: 480px;">3</p>
+    </div>
+    <div>
+        <p class="position" style="height: 80px;width: 30px;margin-top: 0px;top: 560px;">2</p>
+    </div>
+    <div>
+        <p class="position" style="height: 80px;width: 30px;margin-top: 0px;top: 635px;">1</p>
+    </div>
+    <!--Start Board-->
+    <div id="board">
+        <!--Start row 8-->
+        <div class="squareWhite" id="a8" ondrop="drop(event)"ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="b8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="c8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="d8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="e8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="f8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="g8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="h8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <!--End row 8-->
+
+        <!--Start row 7-->
+        <div class="squareBlack" id="a7" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+        <div class="squareWhite" id="b7" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+        <div class="squareBlack" id="c7" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+        <div class="squareWhite" id="d7" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+        <div class="squareBlack" id="e7" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+        <div class="squareWhite" id="f7" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+        <div class="squareBlack" id="g7" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+        <div class="squareWhite" id="h7" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+        <!--End row 7-->
+
+        <!--Start row 6-->
+        <div class="squareWhite" id="a6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="b6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="c6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="d6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="e6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="f6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="g6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="h6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <!--End row 6-->
+
+        <!--Start row 5-->
+        <div class="squareBlack" id="a5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="b5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="c5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="d5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="e5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="f5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="g5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="h5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <!--End row 5-->
+
+        <!--Start row 4-->
+        <div class="squareWhite" id="a4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="b4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="c4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="d4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="e4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="f4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="g4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="h4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <!--End row 4-->
+
+        <!--Start row 3-->
+        <div class="squareBlack" id="a3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="b3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="c3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="d3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="e3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="f3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="g3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="h3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <!--End row 3-->
+
+        <!--Start row 2-->
+        <div class="squareWhite" id="a2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="b2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="c2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="d2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="e2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="f2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="g2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="h2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <!--End row 2-->
+
+        <!--Start row 1-->
+        <div class="squareBlack" id="a1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="b1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="c1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="d1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="e1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="f1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareBlack" id="g1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="squareWhite" id="h1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <!--End row 1-->
+
+    </div>
+    <!--End Board-->
+
+    <div>
+        <p class="position" style="height: 30px;width: 80px;margin-top: 35px;top: 92%;left: 40px">a</p>
+    </div>
+    <div>
+        <p class="position" style="height: 30px;width: 80px;margin-top: 35px;top: 92%;left: 120px">b</p>
+    </div>
+    <div>
+        <p class="position" style="height: 30px;width: 80px;margin-top: 35px;top: 92%;left: 200px">c</p>
+    </div>
+    <div>
+        <p class="position" style="height: 30px;width: 80px;margin-top: 35px;top: 92%;left: 280px">d</p>
+    </div>
+    <div>
+        <p class="position" style="height: 30px;width: 80px;margin-top: 35px;top: 92%;left: 360px">e</p>
+    </div>
+    <div>
+        <p class="position" style="height: 30px;width: 80px;margin-top: 35px;top: 92%;left: 440px">f</p>
+    </div>
+    <div>
+        <p class="position" style="height: 30px;width: 80px;margin-top: 35px;top: 92%;left: 520px">g</p>
+    </div>
+    <div>
+        <p class="position" style="height: 30px;width: 80px;margin-top: 35px;top: 92%;left: 600px">h</p>
+    </div>
+</div>
+<!--End Chess Board-->
+
+<!--Start Footer-->
+<footer class="footer">
+    <div class="containerOne">
+        <div class="row">
+            <!--Start Social media details-->
+            <div class="footer-middle">
+                <h5 class="white-text">Follow me</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/sandaru.chamod.1" target="_blank">Facebook</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/sandaru_chamod/?hl=en" target="_blank">Instagram</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://https://www.linkedin.com/in/sandaru-chamod-687166148/" target="_blank">Linked in</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://github.com/SandaruChamod/Chess-Mate" target="_blank">Github</a></li>
+                </ul>
+            </div>
+            <!--End Social media details-->
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="contain" style="background-color: darkorange;width: 100%;;margin-left: 0px;margin-right: 0px;padding-right: 0;padding-left: 0px">
+            &#169; 2017 Sandaru Chmod. All right received
+        </div>
+    </div>
+</footer>
+<!--End Footer-->
+
+<!--Import JavaScript-->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/chess.js"></script>
+<!--End Import JavaScript-->
+</body>
+<script>
+    //Navigate to Home
+    function home() {
+        window.location.href= 'http://chessmate.ml/index.html?_ijt=48c769shqm2v6t8ladu0d40th2';
+    };
+    //Navigate to Play
+    function play() {
+        window.location.href= 'http://chessmate.ml/index2.html?_ijt=hijjdkv6fnmoijktvlged85pij';
+    };
+	
+//Disable mouse Right-Click
+$(document).ready(function () {
+	//Disable full page
+	$("body").on("contextmenu",function(e){
+		return false;
+	});
+	
+	//Disable part of page
+	$("#id").on("contextmenu",function(e){
+		return false;
+	});
+});
+</script>
+</html>

@@ -1,0 +1,146 @@
+#header-panel{
+    width: 100%;
+    height: 80px;
+    background-color: orange;
+    position: fixed;
+    right: 0;
+    box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
+    margin: auto;
+    top: 0;
+    z-index: 4;
+}
+.btn-header .z-depth-1{
+    height: 70px;
+    width: 100px;
+    background: transparent;
+    -webkit-text-fill-color: black;
+    text-align: center;
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 300%;
+    float: left;
+    text-align: center;
+}
+.z-depth-1:hover {
+    background-color: whitesmoke;
+
+}
+#navi{
+    position: absolute;
+    top: 0px;
+    left: 360px;
+}
+#title{
+    -webkit-text-fill-color: White;
+    position: absolute;
+    top: 0px;
+    margin: auto;
+    width: 300px;
+    height: 80px;
+    top: 0px;
+    font-size: 500%;
+    margin-left: 50px;
+}
+#title h1{
+    font-family: 'Righteous', cursive;
+    position: absolute;
+    top: 0px;
+    margin: auto;
+    margin-top: 8px;
+    width: 500px;
+    height: 50px;
+}
+#side-Buttons {
+    margin-top: 80px;
+    height: 100%;
+    width: 80px;
+    left: 0px;
+    z-index: 2;
+
+}
+.icon-bar {
+    width: 90px;
+    height: 800px;
+    background-color: orange;
+}
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+    color: black;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: white;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+.container{
+    background-color: orange;
+    margin-left: 0px;
+}
+.footer{
+    background-color: orange;
+	z-index:5;
+
+}
+#icon-image{
+    position: fixed;
+    left: 10px;
+    height: 80px;
+    width: 80px;
+    //float: left;
+    z-index: 5;
+    margin-bottom: 2px;
+}
+#pawnProButtons li {
+    z-index: 100;
+
+    display: inline;
+    bottom: 20px;
+}
+#pawnProButtons{
+    margin-top: 100px;
+    //z-index: 100;
+}
+#pawnProButtons2 li {
+    display: inline;
+    bottom: 20px;
+}
+#pawnProButtons2{
+    margin-top: 100px;
+}
+#scoreBoard2{
+    border-radius: 2em;
+    margin-right: 20px;
+    margin-top: 120px;
+    //z-index: 4;
+
+}
+#scoreBoard1{
+    border-radius: 2em;
+    margin-left: 110px;
+    margin-top: 120px;
+    //z-index: 4;
+}
+.footer-middle{
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.containerOne{
+    margin-left: 90px;
+
+}
+
+
